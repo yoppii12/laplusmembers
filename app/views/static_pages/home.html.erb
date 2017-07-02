@@ -1,2 +1,50 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap Sample</title>
+        <!-- BootstrapのCSS読み込み -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <!-- jQuery読み込み -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- BootstrapのJS読み込み -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <h1>Stock Datas</h1>
+        <%#<p>Find me in app/views/static_pages/home.html.erb</p>%>
+        <div class = "container">
+            <div class = "table-responsive">
+                <table class = "table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>コード</th>
+                            <th>銘柄</th>
+                            <th>株価</th>
+                            <th>前日比</th>
+                            <th>取引</th>
+                            <th>取引単位</th>
+                            <th>保有株数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @datas.each do |data| %>
+                            <tr>
+                                <td><%= data.code %></td>
+                                <td><%= data.bn %></td>
+                                <td><%= data.sp %></td>
+                                <td><%= data.dbr %></td>
+                                <td><%= data.tr %></td>
+                                <td><%= data.tru %></td>
+                                <td><%= data.nsh %></td>
+                            </tr>
+                            
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

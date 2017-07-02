@@ -15,6 +15,10 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    
+    #株価表示
+    @Title = "Stock Datas"
+    @datas = Stock.where(code: @user)
   end
   
   private
