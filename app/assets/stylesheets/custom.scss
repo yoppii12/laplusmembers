@@ -3,8 +3,9 @@
 
 /* universal */
 
+
 body {
-  padding-top: 60px;
+  padding-top: 100px;
 }
 
 section {
@@ -14,6 +15,8 @@ section {
 textarea {
   resize: vertical;
 }
+
+
 
 .center {
   text-align: center;
@@ -37,13 +40,15 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2.0em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
   color: #777;
 }
+
+
 
 p {
   font-size: 1.1em;
@@ -68,6 +73,45 @@ p {
   text-decoration: none;
 }
 
+/* footer 
+footer  {
+  padding: 10px 0;
+  font-size: 93%;
+  background-color: #ccc;
+  color: #666;
+  margin: 0 30px;
+}
+
+footer{
+    font-size: 80%;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #313131;
+}
+*/
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ccc;
+}
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+  text-align: center;
+}
+ 
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -77,6 +121,8 @@ $gray-medium-light: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+
 
 /* forms */
 
@@ -105,3 +151,4 @@ input {
     color: $state-danger-text;
   }
 }
+

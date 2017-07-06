@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Laplusmembers</title>
+  <title>LAplus.TECH</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -14,5 +14,6 @@
     <% end %> <!-- ここまで追加 -->
     <%= yield %>
   </div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
