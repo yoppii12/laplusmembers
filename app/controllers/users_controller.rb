@@ -21,6 +21,7 @@ class UsersController < ApplicationController
     @datas = Stock.where(code: @user)
   end
   
+  
   private
   
   def user_params
