@@ -16,14 +16,6 @@ textarea {
   resize: vertical;
 }
 
-footer  {
-  padding: 20px 0;
-  font-size: 93%;
-  text-align: center;
-  background-color: #ccc;
-  color: #666;
-  display: inline-block;
-}
 
 .center {
   text-align: center;
@@ -78,6 +70,29 @@ p {
 #logo:hover {
   color: #fff;
   text-decoration: none;
+}
+
+/* footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #ccc;
+  text-align: center;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /* mixins, variables, etc. */
