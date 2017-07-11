@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   def new
+    #インスタンスを作成しておく
     @user = User.new
   end
   
@@ -11,6 +12,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+    
+    #user_paramsを受け取りstatusモデルを作成してインスタンスに代入
+    @status= Status.new(user_params)
+    
   end
   
   def show
