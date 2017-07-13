@@ -13,9 +13,9 @@ class UsersController < ApplicationController
       render 'new'
     end
     
-    #user_paramsを受け取りstatusモデルを作成してインスタンスに代入
-    @status= Status.new(user_params)
-    
+    #アカウント作成時にuser_paramsを受け取りemergencyモデルを作成してインスタンスに代入
+    @emergency= Emergency.new(name: user_params[:name],email: user_params[:email] )
+    @emergency.save
   end
   
   def show
