@@ -16,8 +16,6 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
-    
-   
   end
   
   def show
@@ -26,6 +24,13 @@ class UsersController < ApplicationController
     #株価表示
     @Title = "Stock Datas"
     @datas = Stock.where(code: @user)
+    
+  end
+  
+  def update
+    @user = User.find(user_params[:id])
+    @emergency = Emergency.find(user_params[:id])
+    @emergency.update_attribute(status: status_id)
   end
   
   private

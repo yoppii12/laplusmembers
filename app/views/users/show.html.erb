@@ -21,6 +21,8 @@
         <%= @user.name %>
         <!-- ここまで　-->
         
+        <%= button_to 'Suspneding Trading',, method: :put, params: {status: "1"} %>
+        
         <%= "Stock Datas" %>
     
         </h1>
