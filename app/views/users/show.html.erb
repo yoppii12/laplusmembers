@@ -21,6 +21,8 @@
         <%= @user.name %>
         <!-- ここまで　-->
         
+        <%= button_to 'Update', update_user_path(@user), method: :put, params: {status: '1'} %>
+        
         <%= "Stock Datas" %>
     
         </h1>

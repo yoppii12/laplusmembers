@@ -21,6 +21,14 @@ class UsersController < ApplicationController
     @datas = Stock.where(code: @user)
   end
   
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attribute(:status,  '1' )
+      redirect_to @user, notice: '取引ステータスを更新しました。'
+    else
+      render ''
+  end
+  
   
   private
   
