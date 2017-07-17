@@ -25,18 +25,23 @@ class UsersController < ApplicationController
     @Title = "Stock Datas"
     @datas = Stock.where(code: @user)
     
+    @status = Emergency.find(params[:id])
   end
   
   def update
-    @user = User.find(user_params[:id])
-    @emergency = Emergency.find(user_params[:id])
-    @emergency.update_attribute(status: status_id)
+    @emergency = Emergency.find(params[:id])
+    @emergency.update_attribute = {:status = '1'}
+    redirect_to @user
   end
   
   private
   
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
+  end
+  
+  def status_params
+    params.require(:status).permit(:name, :email, :status)
   end
   
 end
