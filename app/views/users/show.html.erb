@@ -20,8 +20,18 @@
     
         <%= @user.name %>
         <!-- ここまで　-->
-        
-        <%= button_to 'Update', update_user_path(@user), method: :put, params: {status: '1'} %>
+        <div class="btn-group">
+	        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		        取引ステータス変更
+		        <span class="caret"></span>
+	        </button>
+	        <ul class="dropdown-menu" role="menu">
+		        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= button_to '通常取引', user_path(@user), method: :put, params: {status: '0'} %></a></li>
+		        <li role="presentation"><%= button_to '売り停止', user_path(@user), method: :put, params: {status: '1'} %></li>
+		        <li role="presentation"><%= button_to '売買停止', user_path(@user), method: :put, params: {status: '2'} %></li>
+		        <li role="presentation"><%= button_to '全株放棄', user_path(@user), method: :put, params: {status: '3'} %></li>
+	        </ul>
+        </div>
         
         <%= "Stock Datas" %>
     

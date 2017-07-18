@@ -23,10 +23,11 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(params[:id])
-    if @user.update_attribute(:status,  '1' )
+    if @user.update_attribute(:status,  params[:status])
       redirect_to @user, notice: '取引ステータスを更新しました。'
     else
-      render ''
+      render 'show'
+    end
   end
   
   
