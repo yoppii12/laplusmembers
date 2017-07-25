@@ -23,3 +23,9 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+  
+  #　rails デプロイへの道　より
+  username: root
+  password: 1119jky
+  host: localhost
+  encoding: utf8
