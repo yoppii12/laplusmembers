@@ -42,7 +42,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # railsデプロイへの道
 gem 'rb-readline'
-gem 'unicorn'
+gem 'capistrano3-unicorn'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
