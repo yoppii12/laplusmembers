@@ -59,3 +59,12 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+set :stage, :staging
+set :rails_env, 'staging'
+
+server '127.0.0.1', port: 2222, user: 'vagrant', roles: %w{web app db}, ssh_options: {
+  keys: %w(~/.vagrant.d/insecure_private_key),
+  forward_agent: true,
+  auth_methods: %w(publickey)
+}

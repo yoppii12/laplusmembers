@@ -38,7 +38,7 @@ set :deploy_to, 'laplusmembers'
 
 set :branch, 'master'
 set :default_stage, "development"
-set :scm, :git
+# set :scm, :git
 set :deploy_via, :remote_cache
 
 set :log_level, :debug
